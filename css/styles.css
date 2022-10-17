@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+body {
+    background-color: #3B3A3D;
+}
+
+.invoice-table {
+    border-collapse: collapse;
+    background-color: #6E6C78;
+    border-radius: 5px;
+    margin: 50px auto;
+}
+
+.invoice-table thead tr {
+    border-bottom: 1px dashed #27263D ;
+}
+
+.invoice-table thead tr td{
+    font-size: 18px;
+    padding: 8px;
+}
+
+.invoice-table tbody tr td{
+    padding: 8px;
+}
+
+.invoice-table thead tr td:nth-last-child(1),
+.invoice-table tbody tr td:nth-last-child(1),
+.invoice-table tfoot tr td:nth-last-child(1)
+{
+    text-align: right;
+}
