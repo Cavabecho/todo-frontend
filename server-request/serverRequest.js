@@ -13,3 +13,11 @@ document.getElementById("textFirst").innerHTML = todo.text;
 document.getElementById("dateFirst").innerHTML = todo.date;
 
 document.getElementById("idFirst").innerHTML = todo.user_id;
+
+
+function getData() {
+    fetch('http://localhost:3000/todo')
+  .then((response) => response.json())
+  .then((data) => console.log(data));
+}
+  
