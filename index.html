@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>todo</title>
-    <link rel="stylesheet" href="css\styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <div id="root"></div>
 
     <!-- Create a table -->
     <table class="invoice-table" width="200" height="200">
@@ -27,17 +32,17 @@
             <tr>
                 <td colspan="2" id="textFirst">*</td>
                 <td colspan="2" id="dateFirst">*</td>
-                <td id="idFirst">0</td>
+                <td id="idFirst"></td>
             </tr>
             <tr>
                 <td colspan="2" id="textSecond">*</td>
                 <td colspan="2" id="dateSecond">*</td>
-                <td id="idSecond">1</td>
+                <td id="idSecond"></td>
             </tr>
             <tr>
                 <td colspan="2" id="textThird">*</td>
                 <td colspan="2" id="dateThird">*</td>
-                <td id="idThird">2</td>
+                <td id="idThird"></td>
             </tr>
         </tbody>
 
@@ -50,7 +55,8 @@
 
     </table>
     
-    <script src="js\index.js"></script>
-    <script src="js\serverRequest.js"></script>
+    <script src="server-request/serverRequest.js"></script>
+    <script type="text/babel" src="components/my-component.jsx"></script>
+    <script type="text/babel" src="index.jsx"></script>
 </body>
 </html>

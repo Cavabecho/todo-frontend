@@ -4,15 +4,12 @@ i have an output in table which always equals = 1977 */
 const todo = {
     text: "Buy food",
     date: "18-10-2022",
-    "user_id": 0,
+    user_id: 0,
 }
 
 //Display elements from object to table
-let text = todo.text;
-document.getElementById("textFirst").innerHTML = text;
+document.getElementById("textFirst").innerHTML = todo.text;
 
-let date = todo.date;
-document.getElementById("dateFirst").innerHTML = date;
+document.getElementById("dateFirst").innerHTML = todo.date;
 
-let user_id = todo.user_id;
-document.getElementById("idFirst").innerHTML = user_id;
+document.getElementById("idFirst").innerHTML = todo.user_id;
