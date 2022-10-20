@@ -6,24 +6,34 @@ function MyComponent() {
     setFlag(!flag)
   }
 
-  const handleClick = () => {
+  const handleGetButton = () => {
     getTodos().then((todos) => {
       setTodos(todos)
     })
   }
-  
+
+  const handleAddButton = () => {
+    addTodos()
+  }
+
+  const handleDeletebutton = () => {
+    deleteTodos(20)
+  }
+
+  const handleEditbutton = () => {
+    editTodos(27)
+  }
 
   return (
     <div>
       {flag ? <h1>hello</h1> : null}
-      <button onClick={handleClick}>get buttoon</button>
+      <button onClick={handleGetButton}>get buttoon</button>
+      <button onClick={handleAddButton}>add buttoon</button>
+      <button onClick={handleDeletebutton}>delete buttoon</button>
+      {/*<button onClick={handleEditbutton}>edit buttoon</button>*/}
       {todos.map((todo) => (
         <h1>{todo.text}</h1>
       ))}
-      {/* <button onClick={getData}>add buttoon</button>
-      <button onClick={getData}>edit buttoon</button>
-      <button onClick={getData}>delete buttoon</button> */}
-
     </div>
   )
 }
