@@ -1,18 +1,16 @@
 
-async function addTodos(){
-    const response = fetch('http://104.248.166.249:3000/todo',
+async function addTodos(todo){
+    const response = await fetch('http://104.248.166.249:3000/todo',
     {
         method: 'POST',
         headers: {
-            'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({
-            text: "Eate food",
-            date: "2022-10-18",
-            user_id: 0
-        })
+        body: JSON.stringify(todo)
     })
     .then((result) => result.json())
-    .then((result) => console.log(result))
+
+    console.log(response)
+
+    return response
 }
