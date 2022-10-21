@@ -1,7 +1,7 @@
 function MyApp() {
   return (
     <div>
-      <MyComponent />
+      <Todos />
     </div>
   );
 }
