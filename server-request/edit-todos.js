@@ -9,7 +9,7 @@ async function editTodos(newTodo, id){
     })
     .then((result) => result.json())
 
-    console.log(response)
+    console.log(response.message)
 
     return response
 }
