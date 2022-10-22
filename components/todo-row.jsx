@@ -1,9 +1,9 @@
 function TodoRow ({todo, onDelete, onEdit}) {
-   console.log(todo)
   return (
     <div className="todo-row">
+      <button onClick={() => onDelete(todo.id)}>Done</button>
       {todo.text}
-      <button onClick={() => onDelete(todo.id)}>Delete</button>
+      <button onClick={() => onEdit(todo.id)}>Edit</button>
     </div>
   )
 }
