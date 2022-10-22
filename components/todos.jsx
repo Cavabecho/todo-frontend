@@ -1,22 +1,21 @@
-
 function Todos() {
-  const [flag, setFlag] = React.useState(false)
   const [todos, setTodos] = React.useState([])
-  const showTitle = () => {
-    setFlag(!flag)
-  }
+
+  React.useEffect(() => {
+    getButton()
+  }, [])
 
   const getButton = () => {
     getTodos().then((todos) => {
       setTodos(todos)
     })
   }
-
+  
   const addButton = () => {
     const todo = {
       text: "Buy food",
       date: "2022-10-18",
-      user_id: 0
+      user_id: 1
   }
     addTodos(todo).then(getButton)
   }
@@ -25,29 +24,20 @@ function Todos() {
     deleteTodos(id).then(getButton)
   }
 
-  const editbutton = () => {
+  const editbutton = (id) => {
     const newTodo = {
       text: "Do homework",
       date: "2022-10-18",
       user_id: 1
   }
-    editTodos(newTodo, 26)
+    editTodos(newTodo, id).then(getButton)
   }
 
   return (
     <div>
-      {flag ? <h1>hello</h1> : null}
-      <button onClick={getButton}>get buttoon</button>
-      <button onClick={addButton}>add buttoon</button>
-      <button onClick={deleteButton}>delete buttoon</button>
-      <button onClick={editbutton}>edit buttoon</button>
-      {todos.map((todo) => (
-        // <div> {todo.text} </div>
-        <TodoRow 
-          todo={todo}
-          onDelete={deleteButton}
-        />
-      ))}
+      <button onClick={getButton}>Update todos</button>
+      <button onClick={addButton}>Add todo</button>
+      <TodoTable todos={todos} onDelete={deleteButton} onEdit={editbutton}/>
     </div>
   )
 }

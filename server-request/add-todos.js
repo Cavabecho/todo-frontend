@@ -10,7 +10,7 @@ async function addTodos(todo){
     })
     .then((result) => result.json())
 
-    console.log(response)
+    console.log(response.message)
 
     return response
 }
