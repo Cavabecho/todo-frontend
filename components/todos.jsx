@@ -10,7 +10,7 @@ function Todos() {
       setTodos(todos)
     })
   }
-  
+
   const addButton = () => {
     const todo = {
       text: "Buy food",
