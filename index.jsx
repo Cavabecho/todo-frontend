@@ -1,6 +1,6 @@
 function MyApp() {
   return (
-    <div>
+    <div className="root">
       <Todos />
     </div>
   );

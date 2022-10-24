@@ -34,7 +34,7 @@ function Todos() {
   }
 
   return (
-    <div>
+    <div className="main">
       <button onClick={getButton}>Update todos</button>
       <button onClick={addButton}>Add todo</button>
       <TodoTable todos={todos} onDelete={deleteButton} onEdit={editbutton}/>
