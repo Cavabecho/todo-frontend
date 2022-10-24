@@ -17,6 +17,7 @@
 
 .TodoRow__text{
    margin-right: 5px;
+   font-size: larger;
 }
 
 .TodoRow__delete{
