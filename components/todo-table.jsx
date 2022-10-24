@@ -1,6 +1,6 @@
 function TodoTable({ todos, onDelete, onEdit }) {
   return (
-   <div>
+   <div className="TodoTable">
       {todos.map(todo => (
          <TodoRow
          todo={todo}

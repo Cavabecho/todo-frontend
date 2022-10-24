@@ -1,0 +1,32 @@
+.TodoTable {
+   display: flex;
+   background-color: lightsteelblue;
+   display: inline-block;
+   border-radius: 12px;
+   margin-top: 10px;
+}
+
+.TodoRow{
+   display: flex;
+   margin: 10px;
+   background-color: white;
+   padding: 5px;
+   border-radius: 5px;
+   
+}
+
+.TodoRow__text{
+   margin-right: 5px;
+}
+
+.TodoRow__delete{
+   margin-right: 5px;
+   border-radius: 5px;
+    border-width: 1px;
+}
+
+.TodoRow__edit{
+   margin-left: auto;
+   padding-left: 5px;
+}
+
