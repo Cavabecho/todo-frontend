@@ -11,12 +11,7 @@ function Todos() {
     })
   }
 
-  const addButton = () => {
-    const todo = {
-      text: "Buy food",
-      date: "2022-10-18",
-      user_id: 1
-  }
+  const addButton = (todo) => {
     addTodos(todo).then(getButton)
   }
 
@@ -35,8 +30,9 @@ function Todos() {
 
   return (
     <div className="main">
-      <button onClick={getButton}>Update todos</button>
-      <button onClick={addButton}>Add todo</button>
+      <TodoInput onAdd={addButton} onEdit={editbutton}/>
+      {/* <button onClick={getButton}>Update todos</button> */}
+      {/* <button onClick={addButton}>Add todo</button> */}
       <TodoTable todos={todos} onDelete={deleteButton} onEdit={editbutton}/>
     </div>
   )
