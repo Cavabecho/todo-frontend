@@ -19,9 +19,9 @@ function Todos({logChange}) {
     deleteTodos(id).then(getButton)
   }
 
-  const editbutton = (id) => {
+  const editbutton = (id, text) => {
     const newTodo = {
-      text: "Do homework",
+      text: text,
       date: "2022-10-18",
       user_id: 1
   }

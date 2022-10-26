@@ -1,5 +1,5 @@
 function MyApp() {
-  const [log, setLog] = React.useState(false);
+  const [log, setLog] = React.useState(!false);
 
   const login = () => {
     setLog(!log);
