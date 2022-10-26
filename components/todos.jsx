@@ -1,4 +1,4 @@
-function Todos() {
+function Todos({logChange}) {
   const [todos, setTodos] = React.useState([])
 
   React.useEffect(() => {
@@ -34,6 +34,7 @@ function Todos() {
       {/* <button onClick={getButton}>Update todos</button> */}
       {/* <button onClick={addButton}>Add todo</button> */}
       <TodoTable todos={todos} onDelete={deleteButton} onEdit={editbutton}/>
+      <button onClick={logChange}>Log out</button>
     </div>
   )
 }
