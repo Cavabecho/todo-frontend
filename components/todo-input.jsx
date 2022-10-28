@@ -7,7 +7,11 @@ function TodoInput({onAdd, onEdit}){
             user_id: 1
         }
         if(inputValue == ''){
-            console.log("Name todo")
+            alert("Please name your todo")
+            return
+        } else if(inputValue.length > 30){
+            alert("Your todo needs to be less than 30 characters!")
+            return
         }else{
             onAdd(todo)
             document.getElementById('searchTxt').value = ""
@@ -16,8 +20,8 @@ function TodoInput({onAdd, onEdit}){
 
     return(
         <div className="TodoInput">
-           <input type="text" className="TodoInput__text" id="searchTxt" placeholder="Todo name"/>
-           <button className="TodoInput__button" onClick={() => readInput()}>Add</button>
+           <input type="add" className="TodoInput__text" id="searchTxt" placeholder="Todo name"/>
+           <button className="TodoInput__button" onClick={() => readInput()}>Add to list</button>
         </div>
     )
 }

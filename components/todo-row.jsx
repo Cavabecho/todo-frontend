@@ -1,16 +1,29 @@
 function TodoRow ({todo, onDelete, onEdit}) {
-  const [edit, setEdit] = React.useState(false)
+  let inputValue
 
+  const [edit, setEdit] = React.useState(false)
   const editing = () => {
     setEdit(!edit)
   } 
-
+  
   function changeFlag (){
     if(!edit){
       editing()
       return 
     }
-    let inputValue = document.getElementById(`input${todo.id}`).value
+
+    
+    inputValue = document.getElementById(`input${todo.id}`).value
+
+    if(inputValue == ''){
+      alert("Please name your todo!")
+      
+      return
+    } else if(inputValue.length > 30){
+      alert("Your needs to be less than 30 characters!")
+
+      return
+    }
     onEdit(todo.id, inputValue)
     editing()
   }
@@ -21,7 +34,12 @@ function TodoRow ({todo, onDelete, onEdit}) {
       {!edit ? 
         <div className="TodoRow__text">{todo.text}</div> 
       :
-      <input type="text" className="input" id={`input${todo.id}`} placeholder="New todo name"/>
+      <input 
+        type="edit" 
+        id={`input${todo.id}`} 
+        placeholder="New todo name" 
+        defaultValue={todo.text}
+      />
       }
       <button className="TodoRow__edit" onClick={changeFlag}>{!edit?"Edit":"Save"}</button>
       

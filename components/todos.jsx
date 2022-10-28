@@ -31,10 +31,8 @@ function Todos({logChange}) {
   return (
     <div className="main">
       <TodoInput onAdd={addButton} onEdit={editbutton}/>
-      {/* <button onClick={getButton}>Update todos</button> */}
-      {/* <button onClick={addButton}>Add todo</button> */}
       <TodoTable todos={todos} onDelete={deleteButton} onEdit={editbutton}/>
-      <button onClick={logChange}>Log out</button>
+      {/* <button onClick={logChange}>Log out</button> */}
     </div>
   )
 }
